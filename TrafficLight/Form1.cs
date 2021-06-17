@@ -14,6 +14,7 @@ namespace TrafficLight
     {
         string[] trafficLight = { "Red", "Amber", "Green"};
         int lightNo = 1;
+
         public Form1()
         {
             InitializeComponent();
