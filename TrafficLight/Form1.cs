@@ -12,14 +12,8 @@ namespace TrafficLight
 {
     public partial class Form1 : Form
     {
-        string[] trafficLight = { "Red", "Amber", "Green"};
         int lightNo = 1;
-
-        public Form1()
-        {
-            InitializeComponent();
-           pictureBox1.Location = new Point(100, 100);
-        }
+        public Form1() => InitializeComponent();
         private void ChangeLightColour()
         {
             if(lightNo == 1)
@@ -66,13 +60,7 @@ namespace TrafficLight
             MoveCar(500, 0, -1);
             CarMove();
         }
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            CarMove();
-        }
-        private void btnTrafficLight_Click(object sender, EventArgs e)
-        {
-            ChangeLightColour();
-        }
+        private void btnStart_Click(object sender, EventArgs e) => CarMove();
+        private void btnTrafficLight_Click(object sender, EventArgs e) => ChangeLightColour();
     }
 }
