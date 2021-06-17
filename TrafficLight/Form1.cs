@@ -14,28 +14,26 @@ namespace TrafficLight
     {
         string[] trafficLight = { "Red", "Amber", "Green"};
         int lightNo = 1;
-
         public Form1()
         {
             InitializeComponent();
            pictureBox1.Location = new Point(100, 100);
         }
-
         private void ChangeLightColour()
         {
             if(lightNo == 1)
             {
-                picTrafficLight.Image = Image.FromFile("C:\\Users\\cwainwright\\Desktop\\AmberCircle.jpg");
+                picTrafficLight.Image = Image.FromFile("ACircle.jpg");
                 lightNo = 2;
             } else if (lightNo == 2)
             {
-                picTrafficLight.Image = Image.FromFile("C:\\Users\\cwainwright\\Desktop\\RedCircle.jpg");
+                picTrafficLight.Image = Image.FromFile("RedCircle.jpg");
                 Application.DoEvents();
                 lightNo = 3;
             }
             else if (lightNo == 3) 
             {
-                picTrafficLight.Image = Image.FromFile("C:\\Users\\cwainwright\\Desktop\\GreenCircle.jpg");
+                picTrafficLight.Image = Image.FromFile("GreenCircle.jpg");
                 lightNo = 1;
             }
         }
@@ -48,7 +46,6 @@ namespace TrafficLight
                 CheckLight();
             }
         }
-
         private void CarMove()
         {
             for (int iter = 0; iter < 250; iter++)
@@ -84,15 +81,10 @@ namespace TrafficLight
             }
             CarMove();
         }
-
-
-
         private void btnStart_Click(object sender, EventArgs e)
         {
             CarMove();
         }
-
-
         private void btnTrafficLight_Click(object sender, EventArgs e)
         {
             ChangeLightColour();

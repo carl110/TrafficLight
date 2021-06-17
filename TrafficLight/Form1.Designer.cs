@@ -82,7 +82,7 @@ namespace TrafficLight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 891);
+            this.ClientSize = new System.Drawing.Size(978, 944);
             this.Controls.Add(this.btnTrafficLight);
             this.Controls.Add(this.picTrafficLight);
             this.Controls.Add(this.btnStart);
