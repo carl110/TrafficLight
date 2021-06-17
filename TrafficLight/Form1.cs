@@ -47,39 +47,23 @@ namespace TrafficLight
                 CheckLight();
             }
         }
+        private void MoveCar(int spaces, int xAxis, int yAxiz)
+        {
+            for (int iter = 0; iter < spaces; iter++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Left + xAxis, pictureBox1.Top + yAxiz);
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(5);
+            }
+        }
         private void CarMove()
         {
-            for (int iter = 0; iter < 250; iter++)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Left + 1, pictureBox1.Top);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
-            }
-                CheckLight();
-            for (int iter = 0; iter < 250; iter++)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Left + 1, pictureBox1.Top);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
-            }
-            for (int iter = 0; iter < 500; iter++)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Left, pictureBox1.Top + 1);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
-            }
-            for (int iter = 0; iter < 500; iter++)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Left - 1, pictureBox1.Top);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
-            }
-            for (int iter = 0; iter < 500; iter++)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Left, pictureBox1.Top - 1);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
-            }
+            MoveCar(250, 1, 0);
+            CheckLight();
+            MoveCar(250, 1, 0);
+            MoveCar(500,0,1);
+            MoveCar(500, -1, 0);
+            MoveCar(500, 0, -1);
             CarMove();
         }
         private void btnStart_Click(object sender, EventArgs e)
